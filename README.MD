@@ -25,7 +25,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 // Import your library
-import { SampleModule } from 'nx-forms';
+import { NxFormsModule } from 'nx-forms';
 
 @NgModule({
   declarations: [
@@ -33,9 +33,7 @@ import { SampleModule } from 'nx-forms';
   ],
   imports: [
     BrowserModule,
-
-    // Specify your library as an import
-    LibraryModule
+    NxFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
@@ -50,8 +48,17 @@ Once your library is imported, you can use its components, directives and pipes 
 <h1>
   {{title}}
 </h1>
-<sampleComponent></sampleComponent>
+<nx-input
+  type="text"
+  label="Input"
+  [model]="nxInput"
+  (ngModelChange)="nxInput = $event"
+  [required]="true"
+  help="you can see the result below.">
+</nx-input>
 ```
+
+For more informations, you can run the playground page to see other examples.
 
 ## Development
 

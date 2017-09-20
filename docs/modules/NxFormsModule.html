@@ -1,0 +1,626 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>nx-forms</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	    <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">nx-forms</a>
+            <button type="button" class="btn btn-default btn-menu fa fa-bars" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+            <div id="book-search-input" role="search">
+                <input type="text" placeholder="Type to search">
+            </div>
+            <nav>
+            
+                <ul class="list">
+            
+                    <li class="title">
+                        <a href="../index.html">nx-forms</a>
+                    </li>
+            
+                    <li class="divider"></li>
+            
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../index.html"><span class="fa fa-home"></span>Getting started</a>
+                        <ul class="links">
+                                <li class="link">
+                                    <a href="../"
+                                        
+                                        
+                                        >
+                                        <span class="fa fa-th"></span>Overview
+                                    </a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../modules.html" >
+                            <div class="menu-toggler linked" data-toggle="collapse"
+                                    data-target="#xs-modules-links"
+                            >
+                                <span class="fa fa-archive"></span>
+                                <span class="link-name">Modules</span>
+                                <span class="fa fa-angle-down"></span>
+                            </div>
+                        </a>
+                        <ul class="links collapse "
+                                id="xs-modules-links"
+                            >
+                                <li class="link">
+                                    <a href="../modules/AppModule.html" >AppModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/NxFormsModule.html"  data-type="entity-link" class="active" >NxFormsModule</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-components-links"
+                            >
+                            <span class="fa fa-cogs"></span>
+                            <span>Components</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-components-links"
+                            >
+                                <li class="link">
+                                    <a href="../components/AppComponent.html" >AppComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/NxDatalistComponent.html" >NxDatalistComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/NxDateComponent.html" >NxDateComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/NxInputComponent.html" >NxInputComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/NxSelectComponent.html" >NxSelectComponent</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+            
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-injectables-links"
+                            >
+                            <span class="fa fa-long-arrow-down"></span>
+                            <span>Injectables</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-injectables-links"
+                            >
+                                <li class="link">
+                                    <a href="../injectables/AssetService.html" >AssetService</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+            
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-miscellaneous-links"
+                            >
+                            <span class="fa fa-cubes"></span>
+                            <span>Miscellaneous</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-miscellaneous-links"
+                            >
+                                <li class="link">
+                                  <a href="../miscellaneous/functions.html" data-type="entity-link" >Functions</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../coverage.html" ><span class="fa fa-tasks"></span>Documentation coverage</a>
+                    </li>
+            
+            
+                </ul>
+            
+            </nav>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <nav>
+                   
+                       <ul class="list">
+                   
+                           <li class="title">
+                               <a href="../index.html">nx-forms</a>
+                           </li>
+                   
+                           <li class="divider"></li>
+                   
+                               <div id="book-search-input" role="search">
+                                   <input type="text" placeholder="Type to search">
+                               </div>
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../index.html"><span class="fa fa-home"></span>Getting started</a>
+                               <ul class="links">
+                                       <li class="link">
+                                           <a href="../"
+                                               
+                                               
+                                               >
+                                               <span class="fa fa-th"></span>Overview
+                                           </a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../modules.html" >
+                                   <div class="menu-toggler linked" data-toggle="collapse"
+                                           data-target="#modules-links"
+                                   >
+                                       <span class="fa fa-archive"></span>
+                                       <span class="link-name">Modules</span>
+                                       <span class="fa fa-angle-down"></span>
+                                   </div>
+                               </a>
+                               <ul class="links collapse "
+                                       id="modules-links"
+                   >
+                                       <li class="link">
+                                           <a href="../modules/AppModule.html" >AppModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/NxFormsModule.html"  data-type="entity-link" class="active" >NxFormsModule</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#components-links"
+                   >
+                                   <span class="fa fa-cogs"></span>
+                                   <span>Components</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="components-links"
+                   >
+                                       <li class="link">
+                                           <a href="../components/AppComponent.html" >AppComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/NxDatalistComponent.html" >NxDatalistComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/NxDateComponent.html" >NxDateComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/NxInputComponent.html" >NxInputComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/NxSelectComponent.html" >NxSelectComponent</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                   
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#injectables-links"
+                   >
+                                   <span class="fa fa-long-arrow-down"></span>
+                                   <span>Injectables</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="injectables-links"
+                   >
+                                       <li class="link">
+                                           <a href="../injectables/AssetService.html" >AssetService</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                   
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#miscellaneous-links"
+                   >
+                                   <span class="fa fa-cubes"></span>
+                                   <span>Miscellaneous</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="miscellaneous-links"
+                   >
+                                       <li class="link">
+                                         <a href="../miscellaneous/functions.html" data-type="entity-link" >Functions</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../coverage.html" ><span class="fa fa-tasks"></span>Documentation coverage</a>
+                           </li>
+                   
+                   
+                       </ul>
+                   
+                   </nav>
+               </div>
+               <div class="content module">
+                   <div class="content-data">
+
+
+
+<ol class="breadcrumb">
+  <li>Modules</li>
+  <li>NxFormsModule</li>
+</ol>
+
+      <div class="text-center">
+          <div id="module-graph-svg">
+              <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: dependencies Pages: 1 -->
+<svg width="782pt" height="284pt"
+ viewBox="0.00 0.00 782.00 284.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 280)">
+<title>dependencies</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-280 778,-280 778,4 -4,4"/>
+<text text-anchor="start" x="366.0091" y="-42.4" font-family="sans-serif" font-weight="bold" font-size="14.00" fill="#000000">Legend</text>
+<polygon fill="#ffffb3" stroke="transparent" points="153,-10 153,-30 173,-30 173,-10 153,-10"/>
+<text text-anchor="start" x="176.629" y="-15.4" font-family="sans-serif" font-size="14.00" fill="#000000"> &#160;Declarations</text>
+<polygon fill="#8dd3c7" stroke="transparent" points="266,-10 266,-30 286,-30 286,-10 266,-10"/>
+<text text-anchor="start" x="289.7251" y="-15.4" font-family="sans-serif" font-size="14.00" fill="#000000"> &#160;Module</text>
+<polygon fill="#80b1d3" stroke="transparent" points="352,-10 352,-30 372,-30 372,-10 352,-10"/>
+<text text-anchor="start" x="375.7812" y="-15.4" font-family="sans-serif" font-size="14.00" fill="#000000"> &#160;Bootstrap</text>
+<polygon fill="#fdb462" stroke="transparent" points="449,-10 449,-30 469,-30 469,-10 449,-10"/>
+<text text-anchor="start" x="472.6732" y="-15.4" font-family="sans-serif" font-size="14.00" fill="#000000"> &#160;Providers</text>
+<polygon fill="#fb8072" stroke="transparent" points="545,-10 545,-30 565,-30 565,-10 545,-10"/>
+<text text-anchor="start" x="568.7258" y="-15.4" font-family="sans-serif" font-size="14.00" fill="#000000"> &#160;Exports</text>
+<g id="clust1" class="cluster">
+<title>cluster_NxFormsModule</title>
+<polygon fill="none" stroke="#000000" stroke-dasharray="1,5" points="8,-70 8,-268 766,-268 766,-70 8,-70"/>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_NxFormsModule_declarations</title>
+<polygon fill="none" stroke="#000000" points="162,-78 162,-130 758,-130 758,-78 162,-78"/>
+</g>
+<g id="clust8" class="cluster">
+<title>cluster_NxFormsModule_exports</title>
+<polygon fill="none" stroke="#000000" points="81,-208 81,-260 693,-260 693,-208 81,-208"/>
+</g>
+<g id="clust10" class="cluster">
+<title>cluster_NxFormsModule_providers</title>
+<polygon fill="none" stroke="#000000" points="16,-78 16,-130 154,-130 154,-78 16,-78"/>
+</g>
+<!-- NxInputComponent -->
+<g id="node1" class="node">
+<title>NxInputComponent</title>
+<polygon fill="#ffffb3" stroke="#000000" points="749.9902,-122 622.0098,-122 622.0098,-86 749.9902,-86 749.9902,-122"/>
+<text text-anchor="middle" x="686" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">NxInputComponent</text>
+</g>
+<!-- NxFormsModule -->
+<g id="node5" class="node">
+<title>NxFormsModule</title>
+<polygon fill="#8dd3c7" stroke="#000000" points="447.4356,-187 444.4356,-191 423.4356,-191 420.4356,-187 334.5644,-187 334.5644,-151 447.4356,-151 447.4356,-187"/>
+<text text-anchor="middle" x="391" y="-164.8" font-family="Times,serif" font-size="14.00" fill="#000000">NxFormsModule</text>
+</g>
+<!-- NxInputComponent&#45;&gt;NxFormsModule -->
+<g id="edge1" class="edge">
+<title>NxInputComponent&#45;&gt;NxFormsModule</title>
+<path fill="none" stroke="#000000" d="M653.375,-122.1061C653.375,-141.3391 653.375,-169 653.375,-169 653.375,-169 457.286,-169 457.286,-169"/>
+<polygon fill="#000000" stroke="#000000" points="457.2861,-165.5001 447.286,-169 457.286,-172.5001 457.2861,-165.5001"/>
+</g>
+<!-- NxDateComponent -->
+<g id="node2" class="node">
+<title>NxDateComponent</title>
+<polygon fill="#ffffb3" stroke="#000000" points="604.3655,-122 479.6345,-122 479.6345,-86 604.3655,-86 604.3655,-122"/>
+<text text-anchor="middle" x="542" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">NxDateComponent</text>
+</g>
+<!-- NxDateComponent&#45;&gt;NxFormsModule -->
+<g id="edge2" class="edge">
+<title>NxDateComponent&#45;&gt;NxFormsModule</title>
+<path fill="none" stroke="#000000" d="M507.375,-122.027C507.375,-138.3976 507.375,-160 507.375,-160 507.375,-160 457.483,-160 457.483,-160"/>
+<polygon fill="#000000" stroke="#000000" points="457.483,-156.5001 447.483,-160 457.483,-163.5001 457.483,-156.5001"/>
+</g>
+<!-- NxDatalistComponent -->
+<g id="node3" class="node">
+<title>NxDatalistComponent</title>
+<polygon fill="#ffffb3" stroke="#000000" points="461.9818,-122 320.0182,-122 320.0182,-86 461.9818,-86 461.9818,-122"/>
+<text text-anchor="middle" x="391" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">NxDatalistComponent</text>
+</g>
+<!-- NxDatalistComponent&#45;&gt;NxFormsModule -->
+<g id="edge3" class="edge">
+<title>NxDatalistComponent&#45;&gt;NxFormsModule</title>
+<path fill="none" stroke="#000000" d="M391,-122.1061C391,-122.1061 391,-140.991 391,-140.991"/>
+<polygon fill="#000000" stroke="#000000" points="387.5001,-140.9909 391,-150.991 394.5001,-140.991 387.5001,-140.9909"/>
+</g>
+<!-- NxSelectComponent -->
+<g id="node4" class="node">
+<title>NxSelectComponent</title>
+<polygon fill="#ffffb3" stroke="#000000" points="302.1471,-122 169.8529,-122 169.8529,-86 302.1471,-86 302.1471,-122"/>
+<text text-anchor="middle" x="236" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">NxSelectComponent</text>
+</g>
+<!-- NxSelectComponent&#45;&gt;NxFormsModule -->
+<g id="edge4" class="edge">
+<title>NxSelectComponent&#45;&gt;NxFormsModule</title>
+<path fill="none" stroke="#000000" d="M272.7912,-122.027C272.7912,-138.3976 272.7912,-160 272.7912,-160 272.7912,-160 324.6652,-160 324.6652,-160"/>
+<polygon fill="#000000" stroke="#000000" points="324.6653,-163.5001 334.6652,-160 324.6652,-156.5001 324.6653,-163.5001"/>
+</g>
+<!-- NxInputComponent  -->
+<g id="node6" class="node">
+<title>NxInputComponent </title>
+<polygon fill="#fb8072" stroke="#000000" points="684.9911,-252 553.0089,-252 553.0089,-216 684.9911,-216 684.9911,-252"/>
+<text text-anchor="middle" x="619" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">NxInputComponent </text>
+</g>
+<!-- NxFormsModule&#45;&gt;NxInputComponent  -->
+<g id="edge5" class="edge">
+<title>NxFormsModule&#45;&gt;NxInputComponent </title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M447.3593,-178C502.6899,-178 578.8438,-178 578.8438,-178 578.8438,-178 578.8438,-205.973 578.8438,-205.973"/>
+<polygon fill="#000000" stroke="#000000" points="575.3439,-205.973 578.8438,-215.973 582.3439,-205.973 575.3439,-205.973"/>
+</g>
+<!-- NxDateComponent  -->
+<g id="node7" class="node">
+<title>NxDateComponent </title>
+<polygon fill="#fb8072" stroke="#000000" points="535.3659,-252 406.6341,-252 406.6341,-216 535.3659,-216 535.3659,-252"/>
+<text text-anchor="middle" x="471" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">NxDateComponent </text>
+</g>
+<!-- NxFormsModule&#45;&gt;NxDateComponent  -->
+<g id="edge6" class="edge">
+<title>NxFormsModule&#45;&gt;NxDateComponent </title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M427.0174,-187.1061C427.0174,-187.1061 427.0174,-205.991 427.0174,-205.991"/>
+<polygon fill="#000000" stroke="#000000" points="423.5174,-205.9909 427.0174,-215.991 430.5174,-205.991 423.5174,-205.9909"/>
+</g>
+<!-- NxDatalistComponent  -->
+<g id="node8" class="node">
+<title>NxDatalistComponent </title>
+<polygon fill="#fb8072" stroke="#000000" points="388.9826,-252 243.0174,-252 243.0174,-216 388.9826,-216 388.9826,-252"/>
+<text text-anchor="middle" x="316" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">NxDatalistComponent </text>
+</g>
+<!-- NxFormsModule&#45;&gt;NxDatalistComponent  -->
+<g id="edge7" class="edge">
+<title>NxFormsModule&#45;&gt;NxDatalistComponent </title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M361.7618,-187.1061C361.7618,-187.1061 361.7618,-205.991 361.7618,-205.991"/>
+<polygon fill="#000000" stroke="#000000" points="358.2618,-205.9909 361.7618,-215.991 365.2618,-205.991 358.2618,-205.9909"/>
+</g>
+<!-- NxSelectComponent  -->
+<g id="node9" class="node">
+<title>NxSelectComponent </title>
+<polygon fill="#fb8072" stroke="#000000" points="225.1467,-252 88.8533,-252 88.8533,-216 225.1467,-216 225.1467,-252"/>
+<text text-anchor="middle" x="157" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">NxSelectComponent </text>
+</g>
+<!-- NxFormsModule&#45;&gt;NxSelectComponent  -->
+<g id="edge8" class="edge">
+<title>NxFormsModule&#45;&gt;NxSelectComponent </title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M334.7355,-178C277.5672,-178 197.375,-178 197.375,-178 197.375,-178 197.375,-205.973 197.375,-205.973"/>
+<polygon fill="#000000" stroke="#000000" points="193.8751,-205.973 197.375,-215.973 200.8751,-205.973 193.8751,-205.973"/>
+</g>
+<!-- AssetService -->
+<g id="node10" class="node">
+<title>AssetService</title>
+<ellipse fill="#fdb462" stroke="#000000" cx="85" cy="-104" rx="61.3896" ry="18"/>
+<text text-anchor="middle" x="85" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">AssetService</text>
+</g>
+<!-- AssetService&#45;&gt;NxFormsModule -->
+<g id="edge9" class="edge">
+<title>AssetService&#45;&gt;NxFormsModule</title>
+<path fill="none" stroke="#000000" d="M117.6857,-119.4041C117.6857,-138.6255 117.6857,-169 117.6857,-169 117.6857,-169 324.7005,-169 324.7005,-169"/>
+<polygon fill="#000000" stroke="#000000" points="324.7005,-172.5001 334.7005,-169 324.7005,-165.5001 324.7005,-172.5001"/>
+</g>
+</g>
+</svg>
+
+          </div>
+          <div class="btn-group">
+              <button id="zoom-in" class="btn btn-default btn-sm">Zoom in</button>
+              <button id="reset" class="btn btn-default btn-sm">Reset</button>
+              <button id="zoom-out" class="btn btn-default btn-sm">Zoom out</button>
+          </div>
+      </div>
+      <script src="../js/libs/svg-pan-zoom.min.js"></script>
+      <script src="../js/svg-pan-zoom.controls.js"></script>
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active">
+        <a href="#info" id="info-tab" role="tab" data-toggle="tab" data-link="info">Info</a>
+    </li>
+
+
+    <li>
+        <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+    </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info">
+
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/index.ts</code>
+        </p>
+
+
+        <div class="container-fluid module">
+            <div class="row">
+                <div class="col-sm-3">
+                    <h3>Declarations<a href="https://angular.io/api/core/NgModule#declarations" target="_blank" title="Official documentation about module declarations"><span class="fa fa-info-circle"></span></a></h3>
+                    <ul class="list-group">
+                            <li class="list-group-item">
+                                <a href="../components/NxInputComponent.html">NxInputComponent</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="../components/NxDateComponent.html">NxDateComponent</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="../components/NxDatalistComponent.html">NxDatalistComponent</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="../components/NxSelectComponent.html">NxSelectComponent</a>
+                            </li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h3>Providers<a href="https://angular.io/api/core/NgModule#providers" target="_blank" title="Official documentation about module providers"><span class="fa fa-info-circle"></a></h3>
+                    <ul class="list-group">
+                            <li class="list-group-item">
+                                <a href="../injectables/AssetService.html" >AssetService</a>
+                            </li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h3>Exports<a href="https://angular.io/api/core/NgModule#exports" target="_blank" title="Official documentation about module exports"><span class="fa fa-info-circle"></a></h3>
+                    <ul class="list-group">
+                            <li class="list-group-item">
+                                    <a href="../components/NxInputComponent.html" >NxInputComponent</a>
+                            </li>
+                            <li class="list-group-item">
+                                    <a href="../components/NxDateComponent.html" >NxDateComponent</a>
+                            </li>
+                            <li class="list-group-item">
+                                    <a href="../components/NxDatalistComponent.html" >NxDatalistComponent</a>
+                            </li>
+                            <li class="list-group-item">
+                                    <a href="../components/NxSelectComponent.html" >NxSelectComponent</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="tab-pane fade tab-source-code" id="source">
+        <pre class="line-numbers"><code class="language-typescript">import { NgModule, ModuleWithProviders } from &#x27;@angular/core&#x27;;
+import { CommonModule } from &#x27;@angular/common&#x27;;
+import { FormsModule } from &#x27;@angular/forms&#x27;;
+import { HttpModule } from &#x27;@angular/http&#x27;;
+import { NxInputComponent } from &#x27;./nx-input/index&#x27;;
+import { NxSelectComponent } from &#x27;./nx-select/index&#x27;;
+import { NxDateComponent } from &#x27;./nx-date/index&#x27;;
+import { NxDatalistComponent } from &#x27;./nx-datalist/index&#x27;;
+import { AssetService } from &#x27;./asset.service&#x27;;
+import &#x27;rxjs/add/operator/map&#x27;;
+
+export * from &#x27;./asset.service&#x27;;
+export * from &#x27;./tools&#x27;;
+export * from &#x27;./nx-input/index&#x27;;
+export * from &#x27;./nx-select/index&#x27;;
+export * from &#x27;./nx-date/index&#x27;;
+export * from &#x27;./nx-datalist/index&#x27;;
+
+@NgModule({
+  imports: [
+    CommonModule,
+    FormsModule,
+    HttpModule
+  ],
+  declarations: [
+    NxInputComponent,
+    NxDateComponent,
+    NxDatalistComponent,
+    NxSelectComponent
+  ],
+  providers: [
+    AssetService
+  ],
+  exports: [
+    NxInputComponent,
+    NxDateComponent,
+    NxDatalistComponent,
+    NxSelectComponent
+  ]
+})
+export class NxFormsModule {
+  static forRoot(): ModuleWithProviders {
+    return {
+      ngModule: NxFormsModule,
+      providers: [AssetService]
+    };
+  }
+}
+</code></pre>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+           </div>
+       </div>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script>var COMPODOC_CURRENT_PAGE_DEPTH = 1;</script>
+
+       <script src="../js/search/search.js"></script>
+       <script src="../js/search/lunr.min.js"></script>
+       <script src="../js/search/search-lunr.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+       <script src="../js/search/search_index.js"></script>
+
+    </body>
+</html>

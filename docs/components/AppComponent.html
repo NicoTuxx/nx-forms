@@ -1,0 +1,766 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>nx-forms</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	    <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">nx-forms</a>
+            <button type="button" class="btn btn-default btn-menu fa fa-bars" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+            <div id="book-search-input" role="search">
+                <input type="text" placeholder="Type to search">
+            </div>
+            <nav>
+            
+                <ul class="list">
+            
+                    <li class="title">
+                        <a href="../index.html">nx-forms</a>
+                    </li>
+            
+                    <li class="divider"></li>
+            
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../index.html"><span class="fa fa-home"></span>Getting started</a>
+                        <ul class="links">
+                                <li class="link">
+                                    <a href="../"
+                                        
+                                        
+                                        >
+                                        <span class="fa fa-th"></span>Overview
+                                    </a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../modules.html" >
+                            <div class="menu-toggler linked" data-toggle="collapse"
+                                    data-target="#xs-modules-links"
+                            >
+                                <span class="fa fa-archive"></span>
+                                <span class="link-name">Modules</span>
+                                <span class="fa fa-angle-down"></span>
+                            </div>
+                        </a>
+                        <ul class="links collapse "
+                                id="xs-modules-links"
+                            >
+                                <li class="link">
+                                    <a href="../modules/AppModule.html" >AppModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/NxFormsModule.html" >NxFormsModule</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-components-links"
+                            >
+                            <span class="fa fa-cogs"></span>
+                            <span>Components</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-components-links"
+                            >
+                                <li class="link">
+                                    <a href="../components/AppComponent.html"  data-type="entity-link" class="active" >AppComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/NxDatalistComponent.html" >NxDatalistComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/NxDateComponent.html" >NxDateComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/NxInputComponent.html" >NxInputComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/NxSelectComponent.html" >NxSelectComponent</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+            
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-injectables-links"
+                            >
+                            <span class="fa fa-long-arrow-down"></span>
+                            <span>Injectables</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-injectables-links"
+                            >
+                                <li class="link">
+                                    <a href="../injectables/AssetService.html" >AssetService</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+            
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-miscellaneous-links"
+                            >
+                            <span class="fa fa-cubes"></span>
+                            <span>Miscellaneous</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-miscellaneous-links"
+                            >
+                                <li class="link">
+                                  <a href="../miscellaneous/functions.html" data-type="entity-link" >Functions</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../coverage.html" ><span class="fa fa-tasks"></span>Documentation coverage</a>
+                    </li>
+            
+            
+                </ul>
+            
+            </nav>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <nav>
+                   
+                       <ul class="list">
+                   
+                           <li class="title">
+                               <a href="../index.html">nx-forms</a>
+                           </li>
+                   
+                           <li class="divider"></li>
+                   
+                               <div id="book-search-input" role="search">
+                                   <input type="text" placeholder="Type to search">
+                               </div>
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../index.html"><span class="fa fa-home"></span>Getting started</a>
+                               <ul class="links">
+                                       <li class="link">
+                                           <a href="../"
+                                               
+                                               
+                                               >
+                                               <span class="fa fa-th"></span>Overview
+                                           </a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../modules.html" >
+                                   <div class="menu-toggler linked" data-toggle="collapse"
+                                           data-target="#modules-links"
+                                   >
+                                       <span class="fa fa-archive"></span>
+                                       <span class="link-name">Modules</span>
+                                       <span class="fa fa-angle-down"></span>
+                                   </div>
+                               </a>
+                               <ul class="links collapse "
+                                       id="modules-links"
+                   >
+                                       <li class="link">
+                                           <a href="../modules/AppModule.html" >AppModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/NxFormsModule.html" >NxFormsModule</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#components-links"
+                   >
+                                   <span class="fa fa-cogs"></span>
+                                   <span>Components</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="components-links"
+                   >
+                                       <li class="link">
+                                           <a href="../components/AppComponent.html"  data-type="entity-link" class="active" >AppComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/NxDatalistComponent.html" >NxDatalistComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/NxDateComponent.html" >NxDateComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/NxInputComponent.html" >NxInputComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/NxSelectComponent.html" >NxSelectComponent</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                   
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#injectables-links"
+                   >
+                                   <span class="fa fa-long-arrow-down"></span>
+                                   <span>Injectables</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="injectables-links"
+                   >
+                                       <li class="link">
+                                           <a href="../injectables/AssetService.html" >AssetService</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                   
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#miscellaneous-links"
+                   >
+                                   <span class="fa fa-cubes"></span>
+                                   <span>Miscellaneous</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="miscellaneous-links"
+                   >
+                                       <li class="link">
+                                         <a href="../miscellaneous/functions.html" data-type="entity-link" >Functions</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../coverage.html" ><span class="fa fa-tasks"></span>Documentation coverage</a>
+                           </li>
+                   
+                   
+                       </ul>
+                   
+                   </nav>
+               </div>
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>AppComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active">
+        <a href="#info" id="info-tab" role="tab" data-toggle="tab" data-link="info">Info</a>
+    </li>
+
+    <li>
+        <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+    </li>
+
+    <li>
+        <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+    </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>playground/index.ts</code>
+</p>
+
+
+
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-playground</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">template</td>
+                <td class="col-md-9"><pre class="line-numbers"><code class="language-html">&lt;div style&#x3D;&quot;text-align: center;display:flex; justify-content: center;&quot;&gt;
+&lt;div style&#x3D;&quot;text-align: left; width: 40%;&quot;&gt;
+  &lt;h1&gt;Welcome to the demo page of NxForms !&lt;/h1&gt;
+  &lt;h3&gt;You can see below some examples of existing directives.&lt;/h3&gt;
+    &lt;div style&#x3D;&quot;border: 1px solid rgba(0,0,0,0.35);padding: 10px;margin-bottom: 20px;&quot;&gt;
+      &lt;nx-input
+        type&#x3D;&quot;text&quot;
+        label&#x3D;&quot;Input&quot;
+        [model]&#x3D;&quot;nxInput&quot;
+        (ngModelChange)&#x3D;&quot;nxInput &#x3D; $event&quot;
+        [required]&#x3D;&quot;true&quot;
+        help&#x3D;&quot;you can see the result below.&quot;&gt;
+      &lt;/nx-input&gt;
+      &lt;p&gt;Result: {{nxInput}}&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div style&#x3D;&quot;border: 1px solid rgba(0,0,0,0.35);padding: 10px;margin-bottom: 20px;&quot;&gt;
+      &lt;nx-select
+        label&#x3D;&quot;Select&quot;
+        [model]&#x3D;&quot;nxSelect&quot;
+        (ngModelChange)&#x3D;&quot;nxSelect &#x3D; $event&quot;
+        [options]&#x3D;&quot;nxSelectOptions&quot;
+        [required]&#x3D;&quot;true&quot;&gt;
+      &lt;/nx-select&gt;
+      &lt;p&gt;Result: {{nxSelect}}&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div style&#x3D;&quot;border: 1px solid rgba(0,0,0,0.35);padding: 10px;margin-bottom: 20px;&quot;&gt;
+      &lt;nx-datalist
+        type&#x3D;&quot;text&quot;
+        label&#x3D;&quot;Datalist&quot;
+        [model]&#x3D;&quot;nxDatalist&quot;
+        (ngModelChange)&#x3D;&quot;nxDatalist &#x3D; $event&quot;
+        [options]&#x3D;&quot;nxDatalistOptions&quot;
+        noResult&#x3D;&quot;no result.&quot;
+        [required]&#x3D;&quot;true&quot;
+        help&#x3D;&quot;you can see the result below.&quot;&gt;
+      &lt;/nx-datalist&gt;
+      &lt;p&gt;Result: {{nxDatalist}}&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div style&#x3D;&quot;border: 1px solid rgba(0,0,0,0.35);padding: 10px;margin-bottom: 20px;&quot;&gt;
+      &lt;nx-date
+        label&#x3D;&quot;Date&quot;
+        [model]&#x3D;&quot;nxDate&quot;
+        start-date&#x3D;&quot;2016-01-01&quot;
+        end-date&#x3D;&quot;2018-12-31&quot;
+        (ngModelChange)&#x3D;&quot;nxDate &#x3D; $event&quot;
+        [required]&#x3D;&quot;true&quot;&gt;
+      &lt;/nx-date&gt;
+      &lt;p&gt;Result: {{nxDate}}&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+</code></pre></td>
+            </tr>
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+        <h3 id="index">Index</h3>
+        <table class="table table-sm table-bordered index-table">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                 <a href="#nxDatalistOptions">nxDatalistOptions</a>
+                            </li>
+                            <li>
+                                 <a href="#nxSelectOptions">nxSelectOptions</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#nxDatalist">nxDatalist</a>
+                            </li>
+                            <li>
+                                <a href="#nxDate">nxDate</a>
+                            </li>
+                            <li>
+                                <a href="#nxInput">nxInput</a>
+                            </li>
+                            <li>
+                                <a href="#nxSelect">nxSelect</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h3 id="constructor">Constructor</h3>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>constructor()</code>
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="80" class="link-to-prism">playground/index.ts:80</a></div>
+                                </td>
+                            </tr>
+    
+                </tbody>
+            </table>
+    </section>
+
+    <section>
+        <h3 id="inputs">Inputs</h3>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <a name="nxDatalist"></a>
+                            <code>nxDatalist</code>
+                        </td>
+                        <td class="col-md-10">
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="69" class="link-to-prism">playground/index.ts:69</a></div>
+                                </td>
+                            </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <a name="nxDate"></a>
+                            <code>nxDate</code>
+                        </td>
+                        <td class="col-md-10">
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="70" class="link-to-prism">playground/index.ts:70</a></div>
+                                </td>
+                            </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <a name="nxInput"></a>
+                            <code>nxInput</code>
+                        </td>
+                        <td class="col-md-10">
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="67" class="link-to-prism">playground/index.ts:67</a></div>
+                                </td>
+                            </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <a name="nxSelect"></a>
+                            <code>nxSelect</code>
+                        </td>
+                        <td class="col-md-10">
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="68" class="link-to-prism">playground/index.ts:68</a></div>
+                                </td>
+                            </tr>
+                </tbody>
+            </table>
+    </section>
+
+
+
+
+
+    <section>
+        
+            <h3 id="inputs">
+                Properties
+            </h3>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="nxDatalistOptions"></a>
+                            <span class="name"><b> nxDatalistOptions</b><a href="#nxDatalistOptions"><span class="fa fa-link"></span></a></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>nxDatalistOptions:     <code></code>
+    </code>
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="76" class="link-to-prism">playground/index.ts:76</a></div>
+                                </td>
+                            </tr>
+    
+    
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="nxSelectOptions"></a>
+                            <span class="name"><b> nxSelectOptions</b><a href="#nxSelectOptions"><span class="fa fa-link"></span></a></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>nxSelectOptions:     <code></code>
+    </code>
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="71" class="link-to-prism">playground/index.ts:71</a></div>
+                                </td>
+                            </tr>
+    
+    
+                </tbody>
+            </table>
+    </section>
+</div>
+
+
+    <div class="tab-pane fade tab-source-code" id="source">
+        <pre class="line-numbers"><code class="language-typescript">import { BrowserModule } from &#x27;@angular/platform-browser&#x27;;
+import { NgModule } from &#x27;@angular/core&#x27;;
+import { Component } from &#x27;@angular/core&#x27;;
+import { Input } from &#x27;@angular/core&#x27;;
+import { platformBrowserDynamic } from &#x27;@angular/platform-browser-dynamic&#x27;;
+import { NxFormsModule }  from &#x27;nx-forms&#x27;;
+
+@Component({
+  selector: &#x27;app-playground&#x27;,
+  template: &#x60;
+    &lt;div style&#x3D;&quot;text-align: center;display:flex; justify-content: center;&quot;&gt;
+    &lt;div style&#x3D;&quot;text-align: left; width: 40%;&quot;&gt;
+      &lt;h1&gt;Welcome to the demo page of NxForms !&lt;/h1&gt;
+      &lt;h3&gt;You can see below some examples of existing directives.&lt;/h3&gt;
+        &lt;div style&#x3D;&quot;border: 1px solid rgba(0,0,0,0.35);padding: 10px;margin-bottom: 20px;&quot;&gt;
+          &lt;nx-input
+            type&#x3D;&quot;text&quot;
+            label&#x3D;&quot;Input&quot;
+            [model]&#x3D;&quot;nxInput&quot;
+            (ngModelChange)&#x3D;&quot;nxInput &#x3D; $event&quot;
+            [required]&#x3D;&quot;true&quot;
+            help&#x3D;&quot;you can see the result below.&quot;&gt;
+          &lt;/nx-input&gt;
+          &lt;p&gt;Result: {{nxInput}}&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div style&#x3D;&quot;border: 1px solid rgba(0,0,0,0.35);padding: 10px;margin-bottom: 20px;&quot;&gt;
+          &lt;nx-select
+            label&#x3D;&quot;Select&quot;
+            [model]&#x3D;&quot;nxSelect&quot;
+            (ngModelChange)&#x3D;&quot;nxSelect &#x3D; $event&quot;
+            [options]&#x3D;&quot;nxSelectOptions&quot;
+            [required]&#x3D;&quot;true&quot;&gt;
+          &lt;/nx-select&gt;
+          &lt;p&gt;Result: {{nxSelect}}&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div style&#x3D;&quot;border: 1px solid rgba(0,0,0,0.35);padding: 10px;margin-bottom: 20px;&quot;&gt;
+          &lt;nx-datalist
+            type&#x3D;&quot;text&quot;
+            label&#x3D;&quot;Datalist&quot;
+            [model]&#x3D;&quot;nxDatalist&quot;
+            (ngModelChange)&#x3D;&quot;nxDatalist &#x3D; $event&quot;
+            [options]&#x3D;&quot;nxDatalistOptions&quot;
+            noResult&#x3D;&quot;no result.&quot;
+            [required]&#x3D;&quot;true&quot;
+            help&#x3D;&quot;you can see the result below.&quot;&gt;
+          &lt;/nx-datalist&gt;
+          &lt;p&gt;Result: {{nxDatalist}}&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div style&#x3D;&quot;border: 1px solid rgba(0,0,0,0.35);padding: 10px;margin-bottom: 20px;&quot;&gt;
+          &lt;nx-date
+            label&#x3D;&quot;Date&quot;
+            [model]&#x3D;&quot;nxDate&quot;
+            start-date&#x3D;&quot;2016-01-01&quot;
+            end-date&#x3D;&quot;2018-12-31&quot;
+            (ngModelChange)&#x3D;&quot;nxDate &#x3D; $event&quot;
+            [required]&#x3D;&quot;true&quot;&gt;
+          &lt;/nx-date&gt;
+          &lt;p&gt;Result: {{nxDate}}&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+  &#x60;
+})
+class AppComponent {
+  @Input() nxInput &#x3D; &#x27;&#x27;;
+  @Input() nxSelect &#x3D; &#x27;&#x27;;
+  @Input() nxDatalist &#x3D; &#x27;&#x27;;
+  @Input() nxDate &#x3D; &#x27;&#x27;;
+  nxSelectOptions &#x3D; [
+    {label: &#x27;first value&#x27;, value: &#x27;first_value&#x27;},
+    {label: &#x27;second value&#x27;, value: &#x27;second_value&#x27;},
+    {label: &#x27;third value&#x27;, value: &#x27;third_value&#x27;}
+  ];
+  nxDatalistOptions &#x3D; [
+    {label: &#x27;first value&#x27;, value: &#x27;first_value&#x27;},
+    {label: &#x27;second value&#x27;, value: &#x27;second_value&#x27;},
+    {label: &#x27;third value&#x27;, value: &#x27;third_value&#x27;}
+  ];
+  constructor() {}
+}
+
+@NgModule({
+  bootstrap: [ AppComponent ],
+  declarations: [ AppComponent ],
+  imports: [ BrowserModule, NxFormsModule ]
+})
+class AppModule {}
+
+platformBrowserDynamic().bootstrapModule(AppModule);
+</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade" id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div style="text-align: center;display:flex; justify-content: center;"><div style="text-align: left; width: 40%;">  <h1>Welcome to the demo page of NxForms !</h1>  <h3>You can see below some examples of existing directives.</h3>    <div style="border: 1px solid rgba(0,0,0,0.35);padding: 10px;margin-bottom: 20px;">      <nx-input        type="text"        label="Input"        [model]="nxInput"        (ngModelChange)="nxInput = $event"        [required]="true"        help="you can see the result below.">      </nx-input>      <p>Result: {{nxInput}}</p>    </div>    <div style="border: 1px solid rgba(0,0,0,0.35);padding: 10px;margin-bottom: 20px;">      <nx-select        label="Select"        [model]="nxSelect"        (ngModelChange)="nxSelect = $event"        [options]="nxSelectOptions"        [required]="true">      </nx-select>      <p>Result: {{nxSelect}}</p>    </div>    <div style="border: 1px solid rgba(0,0,0,0.35);padding: 10px;margin-bottom: 20px;">      <nx-datalist        type="text"        label="Datalist"        [model]="nxDatalist"        (ngModelChange)="nxDatalist = $event"        [options]="nxDatalistOptions"        noResult="no result."        [required]="true"        help="you can see the result below.">      </nx-datalist>      <p>Result: {{nxDatalist}}</p>    </div>    <div style="border: 1px solid rgba(0,0,0,0.35);padding: 10px;margin-bottom: 20px;">      <nx-date        label="Date"        [model]="nxDate"        start-date="2016-01-01"        end-date="2018-12-31"        (ngModelChange)="nxDate = $event"        [required]="true">      </nx-date>      <p>Result: {{nxDate}}</p>    </div>  </div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-playground'},{'name': 'NxDatalistComponent', 'selector': 'nx-datalist'},{'name': 'NxDateComponent', 'selector': 'nx-date'},{'name': 'NxInputComponent', 'selector': 'nx-input'},{'name': 'NxSelectComponent', 'selector': 'nx-select'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'AppComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+           </div>
+       </div>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script>var COMPODOC_CURRENT_PAGE_DEPTH = 1;</script>
+
+       <script src="../js/search/search.js"></script>
+       <script src="../js/search/lunr.min.js"></script>
+       <script src="../js/search/search-lunr.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+       <script src="../js/search/search_index.js"></script>
+
+    </body>
+</html>
