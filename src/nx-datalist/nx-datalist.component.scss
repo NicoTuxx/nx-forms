@@ -1,0 +1,14 @@
+.no-result {
+  cursor: default;
+  background-color: white;
+  border: 1px solid gray;
+  display: block;
+  padding: 5px;
+  padding-left: 8px;
+  font-style: italic;
+  font-size: 0.8em;
+  z-index: 999;
+  position: absolute;
+  width: calc(100% - 30px);
+  user-select: none;
+}

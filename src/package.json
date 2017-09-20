@@ -1,0 +1,31 @@
+{
+  "name": "nx-forms",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nicotuxx/nx-forms"
+  },
+  "author": {
+    "name": "NicoTuxx",
+    "email": "nicotuxxdev@gmail.com"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nicotuxx/nx-forms/issues"
+  },
+  "main": "nx-forms.umd.js",
+  "module": "nx-forms.js",
+  "jsnext:main": "nx-forms.js",
+  "typings": "nx-forms.d.ts",
+  "peerDependencies": {
+    "@angular/core": "~4.1.0",
+    "@angular/forms": "~4.1.0",
+    "@angular/http": "~4.1.0",
+    "@angular/common": "~4.1.0",
+    "rxjs": "^5.1.0",
+    "zone.js": "^0.8.4"
+  }
+}

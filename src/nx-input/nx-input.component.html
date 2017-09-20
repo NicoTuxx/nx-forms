@@ -1,0 +1,25 @@
+<div class="form-group">
+  <div class="row">
+    <div [class]="gridClass">
+      <label for="{{inputName}}">
+        <span class="required-symbol" *ngIf="required">*</span> {{label}}
+        <span class="sr-only" *ngIf="srOnly">{{srOnly}}</span>
+        <div aria-live="polite" role="alert">
+          <div class="text-danger" *ngIf="(!valid && submitted) || (forceError && errorMessage)"
+               [attr.aria-hidden]="valid || !submitted">
+            <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> {{errorMessage ? errorMessage : alert}}
+          </div>
+        </div>
+      </label>
+      <input #input [type]="type" id="{{inputName}}" [class]="'form-control ' + inputClass" name="{{inputName}}"
+            aria-describedby="mandatory-text"
+            [attr.aria-invalid]="(!valid && submitted) || forceError"
+            [(ngModel)]="model"
+            (ngModelChange)="ngModelChange.emit($event)"
+            [maxlength]="maxlength"
+            [required]="required"
+            [ngClass]="{'error': (!valid && submitted) || forceError}">
+      <div class="text-commentary">{{help}}</div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+{
+  "alert": {
+    "date": {
+      "incomplete": "Cette date est incomplète.",
+      "beyondToday": "Cette date ne peut dépasser le jour présent."
+    },
+    "incorrect": "Ce champ est incorrect.",
+    "required": "Ce champ est obligatoire."
+  },
+  "date": {
+    "dayLabel": "Jour",
+    "monthLabel": "Mois",
+    "yearLabel": "Année",
+    "months": [
+      "Janvier",
+      "Février",
+      "Mars",
+      "Avril",
+      "Mai",
+      "Juin",
+      "Juillet",
+      "Août",
+      "Septembre",
+      "Octobre",
+      "Novembre",
+      "Décembre"
+    ]
+  }
+}

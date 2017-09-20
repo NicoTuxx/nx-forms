@@ -1,0 +1,103 @@
+@import 'scss/bootstrap.variables.scss';
+@import 'scss/bootstrap.mixins.scss';
+@import 'scss/bootstrap.normalize.scss';
+@import 'scss/bootstrap.scaffolding.scss';
+@import 'scss/bootstrap.grid.scss';
+@import 'scss/bootstrap.forms.scss';
+@import 'scss/bootstrap.buttons.scss';
+
+p {
+  margin: 0 0 0.75em;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  border-radius: 0 !important;
+  color: inherit;
+  margin: 0;
+}
+
+button {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+// Forms
+input {
+  line-height: normal;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+input[type="search"] {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+fieldset {
+  border: 1px solid $gray-lighter;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+}
+
+optgroup {
+  font-weight: bold;
+}
+
+.text-commentary {
+  color: gray;
+  display: block;
+  font-size: 0.75em;
+  font-style: italic;
+  font-weight: normal;
+}
+
+.error {
+  border-color: red;
+  border-width: 1px;
+}
+
+.error:focus {
+  outline: none;
+  border-color: rgba(255, 0, 0, 0.6);
+  border-width: 1px;
+  box-shadow: 0 0 5px 0 rgba(255, 0, 0, 0.5);
+}

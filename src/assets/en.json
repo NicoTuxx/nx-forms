@@ -1,0 +1,29 @@
+{
+  "alert": {
+    "date": {
+      "incomplete": "Date is not complete.",
+      "beyondToday": "Date can't be after today."
+    },
+    "incorrect": "Input is incorrect.",
+    "required": "Input is required."
+  },
+  "date": {
+    "dayLabel": "Day",
+    "monthLabel": "Month",
+    "yearLabel": "Year",
+    "months": [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ]
+  }
+}

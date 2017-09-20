@@ -1,0 +1,27 @@
+<div class="form-group">
+  <label for="{{selectName}}">
+    <span class="required-symbol" *ngIf="required">*</span> {{label}}
+    <div aria-live="polite" role="alert">
+      <div class="text-danger" *ngIf="!valid && submitted"
+           [attr.aria-hidden]="valid || !submitted">
+        <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> {{alert}}
+      </div>
+    </div>
+  </label>
+  <div class="row">
+    <div class="col-md-4">
+      <select id="{{selectName}}" class="form-control" name="{{selectName}}"
+              [attr.aria-invalid]="!valid && submitted"
+              [(ngModel)]="model"
+              #inputElt="ngModel"
+              (ngModelChange)="ngModelChange.emit($event)"
+              [required]="required"
+              [disabled]="disabled"
+              [ngClass]="{'error': !valid && submitted}">
+        <option *ngFor="let option of options" [value]="option.value">
+          {{option.label}}
+        </option>
+      </select>
+    </div>
+  </div>
+</div>
