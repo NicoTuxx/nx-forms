@@ -451,7 +451,15 @@ import { NxFormsModule }  from &#x27;nx-forms&#x27;;
     &lt;div style&#x3D;&quot;text-align: left; width: 40%;&quot;&gt;
       &lt;h1&gt;Welcome to the demo page of NxForms !&lt;/h1&gt;
       &lt;h3&gt;You can see below some examples of existing directives.&lt;/h3&gt;
-        &lt;div style&#x3D;&quot;border: 1px solid rgba(0,0,0,0.35);padding: 10px;margin-bottom: 20px;&quot;&gt;
+        &lt;div style&#x3D;&quot;border: 1px solid rgba(0,0,0,0.35);padding: 10px 20px;margin-bottom: 20px;&quot;&gt;
+          &lt;div style&#x3D;&quot;border: 1px solid rgba(0,0,0,0.2);background: rgba(0,0,0,0.03);font-family: Consolas;margin:10px 0;float: left;&quot;&gt;
+            &lt;span *ngFor&#x3D;&quot;let line of nxInputTemplate.split(&#x27;\n&#x27;); let num &#x3D; index&quot; style&#x3D;&quot;display: inline-block;float: left;width: 100%;&quot;&gt;
+              &lt;p style&#x3D;&quot;margin: 0;border-right: 1px solid rgba(0,0,0,0.5);background: rgba(0,0,0,0.05);padding: 0 5px;float: left;&quot;&gt;
+                {{num + 1}}
+              &lt;/p&gt;
+              &lt;p style&#x3D;&quot;margin: 0;float:left;margin-left: 10px;&quot;&gt;{{line}}&lt;/p&gt;
+            &lt;/span&gt;
+          &lt;/div&gt;
           &lt;nx-input
             type&#x3D;&quot;text&quot;
             label&#x3D;&quot;Input&quot;
@@ -462,7 +470,15 @@ import { NxFormsModule }  from &#x27;nx-forms&#x27;;
           &lt;/nx-input&gt;
           &lt;p&gt;Result: {{nxInput}}&lt;/p&gt;
         &lt;/div&gt;
-        &lt;div style&#x3D;&quot;border: 1px solid rgba(0,0,0,0.35);padding: 10px;margin-bottom: 20px;&quot;&gt;
+        &lt;div style&#x3D;&quot;border: 1px solid rgba(0,0,0,0.35);padding: 10px 20px;margin-bottom: 20px;&quot;&gt;
+          &lt;div style&#x3D;&quot;border: 1px solid rgba(0,0,0,0.2);background: rgba(0,0,0,0.03);font-family: Consolas;margin:10px 0;float: left;&quot;&gt;
+            &lt;span *ngFor&#x3D;&quot;let line of nxSelectTemplate.split(&#x27;\n&#x27;); let num &#x3D; index&quot; style&#x3D;&quot;display: inline-block;float: left;width: 100%;&quot;&gt;
+              &lt;p style&#x3D;&quot;margin: 0;border-right: 1px solid rgba(0,0,0,0.5);background: rgba(0,0,0,0.05);padding: 0 5px;float: left;&quot;&gt;
+                {{num + 1}}
+              &lt;/p&gt;
+              &lt;p style&#x3D;&quot;margin: 0;float:left;margin-left: 10px;&quot;&gt;{{line}}&lt;/p&gt;
+            &lt;/span&gt;
+          &lt;/div&gt;
           &lt;nx-select
             label&#x3D;&quot;Select&quot;
             [model]&#x3D;&quot;nxSelect&quot;
@@ -472,7 +488,16 @@ import { NxFormsModule }  from &#x27;nx-forms&#x27;;
           &lt;/nx-select&gt;
           &lt;p&gt;Result: {{nxSelect}}&lt;/p&gt;
         &lt;/div&gt;
-        &lt;div style&#x3D;&quot;border: 1px solid rgba(0,0,0,0.35);padding: 10px;margin-bottom: 20px;&quot;&gt;
+        &lt;div style&#x3D;&quot;border: 1px solid rgba(0,0,0,0.35);padding: 10px 20px;margin-bottom: 20px;&quot;&gt;
+          &lt;div style&#x3D;&quot;border: 1px solid rgba(0,0,0,0.2);background: rgba(0,0,0,0.03);font-family: Consolas;margin:10px 0;float: left;&quot;&gt;
+            &lt;span *ngFor&#x3D;&quot;let line of nxDatalistTemplate.split(&#x27;\n&#x27;); let num &#x3D; index&quot;
+              style&#x3D;&quot;display: inline-block;float: left;width: 100%;&quot;&gt;
+              &lt;p style&#x3D;&quot;margin: 0;border-right: 1px solid rgba(0,0,0,0.5);background: rgba(0,0,0,0.05);padding: 0 5px;float: left;&quot;&gt;
+                {{num + 1}}
+              &lt;/p&gt;
+              &lt;p style&#x3D;&quot;margin: 0;float:left;margin-left: 10px;&quot;&gt;{{line}}&lt;/p&gt;
+            &lt;/span&gt;
+          &lt;/div&gt;
           &lt;nx-datalist
             type&#x3D;&quot;text&quot;
             label&#x3D;&quot;Datalist&quot;
@@ -485,7 +510,15 @@ import { NxFormsModule }  from &#x27;nx-forms&#x27;;
           &lt;/nx-datalist&gt;
           &lt;p&gt;Result: {{nxDatalist}}&lt;/p&gt;
         &lt;/div&gt;
-        &lt;div style&#x3D;&quot;border: 1px solid rgba(0,0,0,0.35);padding: 10px;margin-bottom: 20px;&quot;&gt;
+        &lt;div style&#x3D;&quot;border: 1px solid rgba(0,0,0,0.35);padding: 10px 20px;margin-bottom: 20px;&quot;&gt;
+          &lt;div style&#x3D;&quot;border: 1px solid rgba(0,0,0,0.2);background: rgba(0,0,0,0.03);font-family: Consolas;margin:10px 0;float: left;&quot;&gt;
+            &lt;span *ngFor&#x3D;&quot;let line of nxDateTemplate.split(&#x27;\n&#x27;); let num &#x3D; index&quot; style&#x3D;&quot;display: inline-block;float: left;width: 100%;&quot;&gt;
+              &lt;p style&#x3D;&quot;margin: 0;border-right: 1px solid rgba(0,0,0,0.5);background: rgba(0,0,0,0.05);padding: 0 5px;float: left;&quot;&gt;
+                {{num + 1}}
+              &lt;/p&gt;
+              &lt;p style&#x3D;&quot;margin: 0;float:left;margin-left: 10px;&quot;&gt;{{line}}&lt;/p&gt;
+            &lt;/span&gt;
+          &lt;/div&gt;
           &lt;nx-date
             label&#x3D;&quot;Date&quot;
             [model]&#x3D;&quot;nxDate&quot;
@@ -504,6 +537,41 @@ class AppComponent {
   @Input() nxSelect &#x3D; &#x27;&#x27;;
   @Input() nxDatalist &#x3D; &#x27;&#x27;;
   @Input() nxDate &#x3D; &#x27;&#x27;;
+
+  nxInputTemplate &#x3D; &#x60;&lt;nx-input
+          ----type&#x3D;&quot;text&quot;
+          ----label&#x3D;&quot;Input&quot;
+          ----[model]&#x3D;&quot;nxInput&quot;
+          ----(ngModelChange)&#x3D;&quot;nxInput &#x3D; $event&quot;
+          ----[required]&#x3D;&quot;true&quot;
+          ----help&#x3D;&quot;you can see the result below.&quot;&gt;
+          &lt;/nx-input&gt;&#x60;;
+  nxSelectTemplate &#x3D; &#x60;&lt;nx-select
+          ----label&#x3D;&quot;Select&quot;
+          ----[model]&#x3D;&quot;nxSelect&quot;
+          ----(ngModelChange)&#x3D;&quot;nxSelect &#x3D; $event&quot;
+          ----[options]&#x3D;&quot;nxSelectOptions&quot;
+          ----[required]&#x3D;&quot;true&quot;&gt;
+          &lt;/nx-select&gt;&#x60;;
+  nxDatalistTemplate &#x3D; &#x60;&lt;nx-datalist
+          ----type&#x3D;&quot;text&quot;
+          ----label&#x3D;&quot;Datalist&quot;
+          ----[model]&#x3D;&quot;nxDatalist&quot;
+          ----(ngModelChange)&#x3D;&quot;nxDatalist &#x3D; $event&quot;
+          ----[options]&#x3D;&quot;nxDatalistOptions&quot;
+          ----noResult&#x3D;&quot;no result.&quot;
+          ----[required]&#x3D;&quot;true&quot;
+          ----help&#x3D;&quot;you can see the result below.&quot;&gt;
+          &lt;/nx-datalist&gt;&#x60;;
+  nxDateTemplate &#x3D; &#x60;&lt;nx-date
+          ----label&#x3D;&quot;Date&quot;
+          ----[model]&#x3D;&quot;nxDate&quot;
+          ----start-date&#x3D;&quot;2016-01-01&quot;
+          ----end-date&#x3D;&quot;2018-12-31&quot;
+          ----(ngModelChange)&#x3D;&quot;nxDate &#x3D; $event&quot;
+          ----[required]&#x3D;&quot;true&quot;&gt;
+          &lt;/nx-date&gt;&#x60;;
+
   nxSelectOptions &#x3D; [
     {label: &#x27;first value&#x27;, value: &#x27;first_value&#x27;},
     {label: &#x27;second value&#x27;, value: &#x27;second_value&#x27;},

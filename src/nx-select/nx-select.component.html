@@ -1,15 +1,15 @@
 <div class="form-group">
-  <label for="{{selectName}}">
-    <span class="required-symbol" *ngIf="required">*</span> {{label}}
-    <div aria-live="polite" role="alert">
-      <div class="text-danger" *ngIf="!valid && submitted"
-           [attr.aria-hidden]="valid || !submitted">
-        <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> {{alert}}
-      </div>
-    </div>
-  </label>
   <div class="row">
-    <div class="col-md-4">
+    <div [class]="gridClass">
+      <label for="{{selectName}}">
+        <span class="required-symbol" *ngIf="required">*</span> {{label}}
+        <div aria-live="polite" role="alert">
+          <div class="text-danger" *ngIf="!valid && submitted"
+               [attr.aria-hidden]="valid || !submitted">
+            <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> {{alert}}
+          </div>
+        </div>
+      </label>
       <select id="{{selectName}}" class="form-control" name="{{selectName}}"
               [attr.aria-invalid]="!valid && submitted"
               [(ngModel)]="model"

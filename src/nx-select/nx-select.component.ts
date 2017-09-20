@@ -9,6 +9,7 @@ import { generateGuid, AssetService } from '../index';
 export class NxSelectComponent {
   @Input() required: boolean;
   @Input() label: string;
+  @Input() gridClass = 'col-md-4';
   @Input() model: any;
   @Input() options: any[];
   @Input() alert: string;

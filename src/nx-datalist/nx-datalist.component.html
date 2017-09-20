@@ -1,16 +1,16 @@
 <div class="form-group">
-  <label for="{{inputName}}">
-    <span class="required-symbol" *ngIf="required">*</span> {{label}}
-    <span class="sr-only" *ngIf="srOnly">{{srOnly}}</span>
-    <div aria-live="polite" role="alert">
-      <div class="text-danger" *ngIf="!valid && submitted"
-           [attr.aria-hidden]="valid || !submitted">
-        <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> {{alert}}
-      </div>
-    </div>
-  </label>
   <div class="row">
-    <div class="col-xs-12 col-sm-7 col-lg-4">
+    <div [class]="gridClass">
+      <label for="{{inputName}}">
+        <span class="required-symbol" *ngIf="required">*</span> {{label}}
+        <span class="sr-only" *ngIf="srOnly">{{srOnly}}</span>
+        <div aria-live="polite" role="alert">
+          <div class="text-danger" *ngIf="!valid && submitted"
+               [attr.aria-hidden]="valid || !submitted">
+            <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> {{alert}}
+          </div>
+        </div>
+      </label>
       <input #input [type]="type" id="{{inputName}}" class="form-control" name="{{inputName}}"
             aria-describedby="mandatory-text"
             [attr.aria-invalid]="!valid && submitted"
@@ -21,13 +21,13 @@
             (ngModelChange)="onChangeInput($event)"
             [ngClass]="{'error': !valid && submitted}"
             list="datalist">
+      <datalist id="datalist">
+        <option *ngFor="let option of datalistOptions" value="{{option.label}}">
+      </datalist>
     </div>
-    <datalist id="datalist">
-      <option *ngFor="let option of datalistOptions" value="{{option.label}}">
-    </datalist>
   </div>
   <div class="row" *ngIf="!matchingValue && datalistModel !== '' && this.model === '' && hasInputFocus()">
-    <div class="col-xs-12 col-sm-7 col-lg-4">
+    <div [class]="gridClass">
       <span class="no-result">
         {{noResult}}
       </span>

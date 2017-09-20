@@ -9,6 +9,7 @@ import { generateGuid, AssetService } from '../index';
 export class NxDatalistComponent {
   @Input() type: string;
   @Input() label: string;
+  @Input() gridClass = 'col-xs-12 col-sm-7 col-lg-4';
   @Input() model: any;
   @Input() help: string;
   @Input() required: boolean;

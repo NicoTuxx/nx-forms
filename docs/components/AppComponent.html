@@ -340,56 +340,93 @@
 
             <tr>
                 <td class="col-md-3">template</td>
-                <td class="col-md-9"><pre class="line-numbers"><code class="language-html">&lt;div style&#x3D;&quot;text-align: center;display:flex; justify-content: center;&quot;&gt;
-&lt;div style&#x3D;&quot;text-align: left; width: 40%;&quot;&gt;
-  &lt;h1&gt;Welcome to the demo page of NxForms !&lt;/h1&gt;
-  &lt;h3&gt;You can see below some examples of existing directives.&lt;/h3&gt;
-    &lt;div style&#x3D;&quot;border: 1px solid rgba(0,0,0,0.35);padding: 10px;margin-bottom: 20px;&quot;&gt;
-      &lt;nx-input
-        type&#x3D;&quot;text&quot;
-        label&#x3D;&quot;Input&quot;
-        [model]&#x3D;&quot;nxInput&quot;
-        (ngModelChange)&#x3D;&quot;nxInput &#x3D; $event&quot;
-        [required]&#x3D;&quot;true&quot;
-        help&#x3D;&quot;you can see the result below.&quot;&gt;
-      &lt;/nx-input&gt;
-      &lt;p&gt;Result: {{nxInput}}&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div style&#x3D;&quot;border: 1px solid rgba(0,0,0,0.35);padding: 10px;margin-bottom: 20px;&quot;&gt;
-      &lt;nx-select
-        label&#x3D;&quot;Select&quot;
-        [model]&#x3D;&quot;nxSelect&quot;
-        (ngModelChange)&#x3D;&quot;nxSelect &#x3D; $event&quot;
-        [options]&#x3D;&quot;nxSelectOptions&quot;
-        [required]&#x3D;&quot;true&quot;&gt;
-      &lt;/nx-select&gt;
-      &lt;p&gt;Result: {{nxSelect}}&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div style&#x3D;&quot;border: 1px solid rgba(0,0,0,0.35);padding: 10px;margin-bottom: 20px;&quot;&gt;
-      &lt;nx-datalist
-        type&#x3D;&quot;text&quot;
-        label&#x3D;&quot;Datalist&quot;
-        [model]&#x3D;&quot;nxDatalist&quot;
-        (ngModelChange)&#x3D;&quot;nxDatalist &#x3D; $event&quot;
-        [options]&#x3D;&quot;nxDatalistOptions&quot;
-        noResult&#x3D;&quot;no result.&quot;
-        [required]&#x3D;&quot;true&quot;
-        help&#x3D;&quot;you can see the result below.&quot;&gt;
-      &lt;/nx-datalist&gt;
-      &lt;p&gt;Result: {{nxDatalist}}&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div style&#x3D;&quot;border: 1px solid rgba(0,0,0,0.35);padding: 10px;margin-bottom: 20px;&quot;&gt;
-      &lt;nx-date
-        label&#x3D;&quot;Date&quot;
-        [model]&#x3D;&quot;nxDate&quot;
-        start-date&#x3D;&quot;2016-01-01&quot;
-        end-date&#x3D;&quot;2018-12-31&quot;
-        (ngModelChange)&#x3D;&quot;nxDate &#x3D; $event&quot;
-        [required]&#x3D;&quot;true&quot;&gt;
-      &lt;/nx-date&gt;
-      &lt;p&gt;Result: {{nxDate}}&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
+                <td class="col-md-9"><pre class="line-numbers"><code class="language-html">    &lt;div style&#x3D;&quot;text-align: center;display:flex; justify-content: center;&quot;&gt;
+    &lt;div style&#x3D;&quot;text-align: left; width: 40%;&quot;&gt;
+      &lt;h1&gt;Welcome to the demo page of NxForms !&lt;/h1&gt;
+      &lt;h3&gt;You can see below some examples of existing directives.&lt;/h3&gt;
+        &lt;div style&#x3D;&quot;border: 1px solid rgba(0,0,0,0.35);padding: 10px 20px;margin-bottom: 20px;&quot;&gt;
+          &lt;div style&#x3D;&quot;border: 1px solid rgba(0,0,0,0.2);background: rgba(0,0,0,0.03);font-family: Consolas;margin:10px 0;float: left;&quot;&gt;
+            &lt;span *ngFor&#x3D;&quot;let line of nxInputTemplate.split(&#x27;
+&#x27;); let num &#x3D; index&quot; style&#x3D;&quot;display: inline-block;float: left;width: 100%;&quot;&gt;
+              &lt;p style&#x3D;&quot;margin: 0;border-right: 1px solid rgba(0,0,0,0.5);background: rgba(0,0,0,0.05);padding: 0 5px;float: left;&quot;&gt;
+                {{num + 1}}
+              &lt;/p&gt;
+              &lt;p style&#x3D;&quot;margin: 0;float:left;margin-left: 10px;&quot;&gt;{{line}}&lt;/p&gt;
+            &lt;/span&gt;
+          &lt;/div&gt;
+          &lt;nx-input
+            type&#x3D;&quot;text&quot;
+            label&#x3D;&quot;Input&quot;
+            [model]&#x3D;&quot;nxInput&quot;
+            (ngModelChange)&#x3D;&quot;nxInput &#x3D; $event&quot;
+            [required]&#x3D;&quot;true&quot;
+            help&#x3D;&quot;you can see the result below.&quot;&gt;
+          &lt;/nx-input&gt;
+          &lt;p&gt;Result: {{nxInput}}&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div style&#x3D;&quot;border: 1px solid rgba(0,0,0,0.35);padding: 10px 20px;margin-bottom: 20px;&quot;&gt;
+          &lt;div style&#x3D;&quot;border: 1px solid rgba(0,0,0,0.2);background: rgba(0,0,0,0.03);font-family: Consolas;margin:10px 0;float: left;&quot;&gt;
+            &lt;span *ngFor&#x3D;&quot;let line of nxSelectTemplate.split(&#x27;
+&#x27;); let num &#x3D; index&quot; style&#x3D;&quot;display: inline-block;float: left;width: 100%;&quot;&gt;
+              &lt;p style&#x3D;&quot;margin: 0;border-right: 1px solid rgba(0,0,0,0.5);background: rgba(0,0,0,0.05);padding: 0 5px;float: left;&quot;&gt;
+                {{num + 1}}
+              &lt;/p&gt;
+              &lt;p style&#x3D;&quot;margin: 0;float:left;margin-left: 10px;&quot;&gt;{{line}}&lt;/p&gt;
+            &lt;/span&gt;
+          &lt;/div&gt;
+          &lt;nx-select
+            label&#x3D;&quot;Select&quot;
+            [model]&#x3D;&quot;nxSelect&quot;
+            (ngModelChange)&#x3D;&quot;nxSelect &#x3D; $event&quot;
+            [options]&#x3D;&quot;nxSelectOptions&quot;
+            [required]&#x3D;&quot;true&quot;&gt;
+          &lt;/nx-select&gt;
+          &lt;p&gt;Result: {{nxSelect}}&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div style&#x3D;&quot;border: 1px solid rgba(0,0,0,0.35);padding: 10px 20px;margin-bottom: 20px;&quot;&gt;
+          &lt;div style&#x3D;&quot;border: 1px solid rgba(0,0,0,0.2);background: rgba(0,0,0,0.03);font-family: Consolas;margin:10px 0;float: left;&quot;&gt;
+            &lt;span *ngFor&#x3D;&quot;let line of nxDatalistTemplate.split(&#x27;
+&#x27;); let num &#x3D; index&quot;
+              style&#x3D;&quot;display: inline-block;float: left;width: 100%;&quot;&gt;
+              &lt;p style&#x3D;&quot;margin: 0;border-right: 1px solid rgba(0,0,0,0.5);background: rgba(0,0,0,0.05);padding: 0 5px;float: left;&quot;&gt;
+                {{num + 1}}
+              &lt;/p&gt;
+              &lt;p style&#x3D;&quot;margin: 0;float:left;margin-left: 10px;&quot;&gt;{{line}}&lt;/p&gt;
+            &lt;/span&gt;
+          &lt;/div&gt;
+          &lt;nx-datalist
+            type&#x3D;&quot;text&quot;
+            label&#x3D;&quot;Datalist&quot;
+            [model]&#x3D;&quot;nxDatalist&quot;
+            (ngModelChange)&#x3D;&quot;nxDatalist &#x3D; $event&quot;
+            [options]&#x3D;&quot;nxDatalistOptions&quot;
+            noResult&#x3D;&quot;no result.&quot;
+            [required]&#x3D;&quot;true&quot;
+            help&#x3D;&quot;you can see the result below.&quot;&gt;
+          &lt;/nx-datalist&gt;
+          &lt;p&gt;Result: {{nxDatalist}}&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div style&#x3D;&quot;border: 1px solid rgba(0,0,0,0.35);padding: 10px 20px;margin-bottom: 20px;&quot;&gt;
+          &lt;div style&#x3D;&quot;border: 1px solid rgba(0,0,0,0.2);background: rgba(0,0,0,0.03);font-family: Consolas;margin:10px 0;float: left;&quot;&gt;
+            &lt;span *ngFor&#x3D;&quot;let line of nxDateTemplate.split(&#x27;
+&#x27;); let num &#x3D; index&quot; style&#x3D;&quot;display: inline-block;float: left;width: 100%;&quot;&gt;
+              &lt;p style&#x3D;&quot;margin: 0;border-right: 1px solid rgba(0,0,0,0.5);background: rgba(0,0,0,0.05);padding: 0 5px;float: left;&quot;&gt;
+                {{num + 1}}
+              &lt;/p&gt;
+              &lt;p style&#x3D;&quot;margin: 0;float:left;margin-left: 10px;&quot;&gt;{{line}}&lt;/p&gt;
+            &lt;/span&gt;
+          &lt;/div&gt;
+          &lt;nx-date
+            label&#x3D;&quot;Date&quot;
+            [model]&#x3D;&quot;nxDate&quot;
+            start-date&#x3D;&quot;2016-01-01&quot;
+            end-date&#x3D;&quot;2018-12-31&quot;
+            (ngModelChange)&#x3D;&quot;nxDate &#x3D; $event&quot;
+            [required]&#x3D;&quot;true&quot;&gt;
+          &lt;/nx-date&gt;
+          &lt;p&gt;Result: {{nxDate}}&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
 </code></pre></td>
             </tr>
 
@@ -415,7 +452,19 @@
                                  <a href="#nxDatalistOptions">nxDatalistOptions</a>
                             </li>
                             <li>
+                                 <a href="#nxDatalistTemplate">nxDatalistTemplate</a>
+                            </li>
+                            <li>
+                                 <a href="#nxDateTemplate">nxDateTemplate</a>
+                            </li>
+                            <li>
+                                 <a href="#nxInputTemplate">nxInputTemplate</a>
+                            </li>
+                            <li>
                                  <a href="#nxSelectOptions">nxSelectOptions</a>
+                            </li>
+                            <li>
+                                 <a href="#nxSelectTemplate">nxSelectTemplate</a>
                             </li>
                         </ul>
                     </td>
@@ -458,7 +507,7 @@
                     </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="80" class="link-to-prism">playground/index.ts:80</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="148" class="link-to-prism">playground/index.ts:148</a></div>
                                 </td>
                             </tr>
     
@@ -480,7 +529,7 @@
                     </tr>
                             <tr>
                                 <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="69" class="link-to-prism">playground/index.ts:69</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="102" class="link-to-prism">playground/index.ts:102</a></div>
                                 </td>
                             </tr>
                 </tbody>
@@ -497,7 +546,7 @@
                     </tr>
                             <tr>
                                 <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="70" class="link-to-prism">playground/index.ts:70</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="103" class="link-to-prism">playground/index.ts:103</a></div>
                                 </td>
                             </tr>
                 </tbody>
@@ -514,7 +563,7 @@
                     </tr>
                             <tr>
                                 <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="67" class="link-to-prism">playground/index.ts:67</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="100" class="link-to-prism">playground/index.ts:100</a></div>
                                 </td>
                             </tr>
                 </tbody>
@@ -531,7 +580,7 @@
                     </tr>
                             <tr>
                                 <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="68" class="link-to-prism">playground/index.ts:68</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="101" class="link-to-prism">playground/index.ts:101</a></div>
                                 </td>
                             </tr>
                 </tbody>
@@ -563,7 +612,114 @@
                     </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="76" class="link-to-prism">playground/index.ts:76</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="144" class="link-to-prism">playground/index.ts:144</a></div>
+                                </td>
+                            </tr>
+    
+    
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="nxDatalistTemplate"></a>
+                            <span class="name"><b> nxDatalistTemplate</b><a href="#nxDatalistTemplate"><span class="fa fa-link"></span></a></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>nxDatalistTemplate:     <code></code>
+    </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Default value : </i><code>&lt;nx-datalist
+              ----type&#x3D;&quot;text&quot;
+              ----label&#x3D;&quot;Datalist&quot;
+              ----[model]&#x3D;&quot;nxDatalist&quot;
+              ----(ngModelChange)&#x3D;&quot;nxDatalist &#x3D; $event&quot;
+              ----[options]&#x3D;&quot;nxDatalistOptions&quot;
+              ----noResult&#x3D;&quot;no result.&quot;
+              ----[required]&#x3D;&quot;true&quot;
+              ----help&#x3D;&quot;you can see the result below.&quot;&gt;
+              &lt;/nx-datalist&gt;</code>
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="120" class="link-to-prism">playground/index.ts:120</a></div>
+                                </td>
+                            </tr>
+    
+    
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="nxDateTemplate"></a>
+                            <span class="name"><b> nxDateTemplate</b><a href="#nxDateTemplate"><span class="fa fa-link"></span></a></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>nxDateTemplate:     <code></code>
+    </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Default value : </i><code>&lt;nx-date
+              ----label&#x3D;&quot;Date&quot;
+              ----[model]&#x3D;&quot;nxDate&quot;
+              ----start-date&#x3D;&quot;2016-01-01&quot;
+              ----end-date&#x3D;&quot;2018-12-31&quot;
+              ----(ngModelChange)&#x3D;&quot;nxDate &#x3D; $event&quot;
+              ----[required]&#x3D;&quot;true&quot;&gt;
+              &lt;/nx-date&gt;</code>
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="130" class="link-to-prism">playground/index.ts:130</a></div>
+                                </td>
+                            </tr>
+    
+    
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="nxInputTemplate"></a>
+                            <span class="name"><b> nxInputTemplate</b><a href="#nxInputTemplate"><span class="fa fa-link"></span></a></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>nxInputTemplate:     <code></code>
+    </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Default value : </i><code>&lt;nx-input
+              ----type&#x3D;&quot;text&quot;
+              ----label&#x3D;&quot;Input&quot;
+              ----[model]&#x3D;&quot;nxInput&quot;
+              ----(ngModelChange)&#x3D;&quot;nxInput &#x3D; $event&quot;
+              ----[required]&#x3D;&quot;true&quot;
+              ----help&#x3D;&quot;you can see the result below.&quot;&gt;
+              &lt;/nx-input&gt;</code>
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="105" class="link-to-prism">playground/index.ts:105</a></div>
                                 </td>
                             </tr>
     
@@ -586,7 +742,41 @@
                     </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="71" class="link-to-prism">playground/index.ts:71</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="139" class="link-to-prism">playground/index.ts:139</a></div>
+                                </td>
+                            </tr>
+    
+    
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="nxSelectTemplate"></a>
+                            <span class="name"><b> nxSelectTemplate</b><a href="#nxSelectTemplate"><span class="fa fa-link"></span></a></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>nxSelectTemplate:     <code></code>
+    </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Default value : </i><code>&lt;nx-select
+              ----label&#x3D;&quot;Select&quot;
+              ----[model]&#x3D;&quot;nxSelect&quot;
+              ----(ngModelChange)&#x3D;&quot;nxSelect &#x3D; $event&quot;
+              ----[options]&#x3D;&quot;nxSelectOptions&quot;
+              ----[required]&#x3D;&quot;true&quot;&gt;
+              &lt;/nx-select&gt;</code>
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="113" class="link-to-prism">playground/index.ts:113</a></div>
                                 </td>
                             </tr>
     
@@ -612,7 +802,15 @@ import { NxFormsModule }  from &#x27;nx-forms&#x27;;
     &lt;div style&#x3D;&quot;text-align: left; width: 40%;&quot;&gt;
       &lt;h1&gt;Welcome to the demo page of NxForms !&lt;/h1&gt;
       &lt;h3&gt;You can see below some examples of existing directives.&lt;/h3&gt;
-        &lt;div style&#x3D;&quot;border: 1px solid rgba(0,0,0,0.35);padding: 10px;margin-bottom: 20px;&quot;&gt;
+        &lt;div style&#x3D;&quot;border: 1px solid rgba(0,0,0,0.35);padding: 10px 20px;margin-bottom: 20px;&quot;&gt;
+          &lt;div style&#x3D;&quot;border: 1px solid rgba(0,0,0,0.2);background: rgba(0,0,0,0.03);font-family: Consolas;margin:10px 0;float: left;&quot;&gt;
+            &lt;span *ngFor&#x3D;&quot;let line of nxInputTemplate.split(&#x27;\n&#x27;); let num &#x3D; index&quot; style&#x3D;&quot;display: inline-block;float: left;width: 100%;&quot;&gt;
+              &lt;p style&#x3D;&quot;margin: 0;border-right: 1px solid rgba(0,0,0,0.5);background: rgba(0,0,0,0.05);padding: 0 5px;float: left;&quot;&gt;
+                {{num + 1}}
+              &lt;/p&gt;
+              &lt;p style&#x3D;&quot;margin: 0;float:left;margin-left: 10px;&quot;&gt;{{line}}&lt;/p&gt;
+            &lt;/span&gt;
+          &lt;/div&gt;
           &lt;nx-input
             type&#x3D;&quot;text&quot;
             label&#x3D;&quot;Input&quot;
@@ -623,7 +821,15 @@ import { NxFormsModule }  from &#x27;nx-forms&#x27;;
           &lt;/nx-input&gt;
           &lt;p&gt;Result: {{nxInput}}&lt;/p&gt;
         &lt;/div&gt;
-        &lt;div style&#x3D;&quot;border: 1px solid rgba(0,0,0,0.35);padding: 10px;margin-bottom: 20px;&quot;&gt;
+        &lt;div style&#x3D;&quot;border: 1px solid rgba(0,0,0,0.35);padding: 10px 20px;margin-bottom: 20px;&quot;&gt;
+          &lt;div style&#x3D;&quot;border: 1px solid rgba(0,0,0,0.2);background: rgba(0,0,0,0.03);font-family: Consolas;margin:10px 0;float: left;&quot;&gt;
+            &lt;span *ngFor&#x3D;&quot;let line of nxSelectTemplate.split(&#x27;\n&#x27;); let num &#x3D; index&quot; style&#x3D;&quot;display: inline-block;float: left;width: 100%;&quot;&gt;
+              &lt;p style&#x3D;&quot;margin: 0;border-right: 1px solid rgba(0,0,0,0.5);background: rgba(0,0,0,0.05);padding: 0 5px;float: left;&quot;&gt;
+                {{num + 1}}
+              &lt;/p&gt;
+              &lt;p style&#x3D;&quot;margin: 0;float:left;margin-left: 10px;&quot;&gt;{{line}}&lt;/p&gt;
+            &lt;/span&gt;
+          &lt;/div&gt;
           &lt;nx-select
             label&#x3D;&quot;Select&quot;
             [model]&#x3D;&quot;nxSelect&quot;
@@ -633,7 +839,16 @@ import { NxFormsModule }  from &#x27;nx-forms&#x27;;
           &lt;/nx-select&gt;
           &lt;p&gt;Result: {{nxSelect}}&lt;/p&gt;
         &lt;/div&gt;
-        &lt;div style&#x3D;&quot;border: 1px solid rgba(0,0,0,0.35);padding: 10px;margin-bottom: 20px;&quot;&gt;
+        &lt;div style&#x3D;&quot;border: 1px solid rgba(0,0,0,0.35);padding: 10px 20px;margin-bottom: 20px;&quot;&gt;
+          &lt;div style&#x3D;&quot;border: 1px solid rgba(0,0,0,0.2);background: rgba(0,0,0,0.03);font-family: Consolas;margin:10px 0;float: left;&quot;&gt;
+            &lt;span *ngFor&#x3D;&quot;let line of nxDatalistTemplate.split(&#x27;\n&#x27;); let num &#x3D; index&quot;
+              style&#x3D;&quot;display: inline-block;float: left;width: 100%;&quot;&gt;
+              &lt;p style&#x3D;&quot;margin: 0;border-right: 1px solid rgba(0,0,0,0.5);background: rgba(0,0,0,0.05);padding: 0 5px;float: left;&quot;&gt;
+                {{num + 1}}
+              &lt;/p&gt;
+              &lt;p style&#x3D;&quot;margin: 0;float:left;margin-left: 10px;&quot;&gt;{{line}}&lt;/p&gt;
+            &lt;/span&gt;
+          &lt;/div&gt;
           &lt;nx-datalist
             type&#x3D;&quot;text&quot;
             label&#x3D;&quot;Datalist&quot;
@@ -646,7 +861,15 @@ import { NxFormsModule }  from &#x27;nx-forms&#x27;;
           &lt;/nx-datalist&gt;
           &lt;p&gt;Result: {{nxDatalist}}&lt;/p&gt;
         &lt;/div&gt;
-        &lt;div style&#x3D;&quot;border: 1px solid rgba(0,0,0,0.35);padding: 10px;margin-bottom: 20px;&quot;&gt;
+        &lt;div style&#x3D;&quot;border: 1px solid rgba(0,0,0,0.35);padding: 10px 20px;margin-bottom: 20px;&quot;&gt;
+          &lt;div style&#x3D;&quot;border: 1px solid rgba(0,0,0,0.2);background: rgba(0,0,0,0.03);font-family: Consolas;margin:10px 0;float: left;&quot;&gt;
+            &lt;span *ngFor&#x3D;&quot;let line of nxDateTemplate.split(&#x27;\n&#x27;); let num &#x3D; index&quot; style&#x3D;&quot;display: inline-block;float: left;width: 100%;&quot;&gt;
+              &lt;p style&#x3D;&quot;margin: 0;border-right: 1px solid rgba(0,0,0,0.5);background: rgba(0,0,0,0.05);padding: 0 5px;float: left;&quot;&gt;
+                {{num + 1}}
+              &lt;/p&gt;
+              &lt;p style&#x3D;&quot;margin: 0;float:left;margin-left: 10px;&quot;&gt;{{line}}&lt;/p&gt;
+            &lt;/span&gt;
+          &lt;/div&gt;
           &lt;nx-date
             label&#x3D;&quot;Date&quot;
             [model]&#x3D;&quot;nxDate&quot;
@@ -665,6 +888,41 @@ class AppComponent {
   @Input() nxSelect &#x3D; &#x27;&#x27;;
   @Input() nxDatalist &#x3D; &#x27;&#x27;;
   @Input() nxDate &#x3D; &#x27;&#x27;;
+
+  nxInputTemplate &#x3D; &#x60;&lt;nx-input
+          ----type&#x3D;&quot;text&quot;
+          ----label&#x3D;&quot;Input&quot;
+          ----[model]&#x3D;&quot;nxInput&quot;
+          ----(ngModelChange)&#x3D;&quot;nxInput &#x3D; $event&quot;
+          ----[required]&#x3D;&quot;true&quot;
+          ----help&#x3D;&quot;you can see the result below.&quot;&gt;
+          &lt;/nx-input&gt;&#x60;;
+  nxSelectTemplate &#x3D; &#x60;&lt;nx-select
+          ----label&#x3D;&quot;Select&quot;
+          ----[model]&#x3D;&quot;nxSelect&quot;
+          ----(ngModelChange)&#x3D;&quot;nxSelect &#x3D; $event&quot;
+          ----[options]&#x3D;&quot;nxSelectOptions&quot;
+          ----[required]&#x3D;&quot;true&quot;&gt;
+          &lt;/nx-select&gt;&#x60;;
+  nxDatalistTemplate &#x3D; &#x60;&lt;nx-datalist
+          ----type&#x3D;&quot;text&quot;
+          ----label&#x3D;&quot;Datalist&quot;
+          ----[model]&#x3D;&quot;nxDatalist&quot;
+          ----(ngModelChange)&#x3D;&quot;nxDatalist &#x3D; $event&quot;
+          ----[options]&#x3D;&quot;nxDatalistOptions&quot;
+          ----noResult&#x3D;&quot;no result.&quot;
+          ----[required]&#x3D;&quot;true&quot;
+          ----help&#x3D;&quot;you can see the result below.&quot;&gt;
+          &lt;/nx-datalist&gt;&#x60;;
+  nxDateTemplate &#x3D; &#x60;&lt;nx-date
+          ----label&#x3D;&quot;Date&quot;
+          ----[model]&#x3D;&quot;nxDate&quot;
+          ----start-date&#x3D;&quot;2016-01-01&quot;
+          ----end-date&#x3D;&quot;2018-12-31&quot;
+          ----(ngModelChange)&#x3D;&quot;nxDate &#x3D; $event&quot;
+          ----[required]&#x3D;&quot;true&quot;&gt;
+          &lt;/nx-date&gt;&#x60;;
+
   nxSelectOptions &#x3D; [
     {label: &#x27;first value&#x27;, value: &#x27;first_value&#x27;},
     {label: &#x27;second value&#x27;, value: &#x27;second_value&#x27;},
@@ -713,7 +971,7 @@ platformBrowserDynamic().bootstrapModule(AppModule);
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div style="text-align: center;display:flex; justify-content: center;"><div style="text-align: left; width: 40%;">  <h1>Welcome to the demo page of NxForms !</h1>  <h3>You can see below some examples of existing directives.</h3>    <div style="border: 1px solid rgba(0,0,0,0.35);padding: 10px;margin-bottom: 20px;">      <nx-input        type="text"        label="Input"        [model]="nxInput"        (ngModelChange)="nxInput = $event"        [required]="true"        help="you can see the result below.">      </nx-input>      <p>Result: {{nxInput}}</p>    </div>    <div style="border: 1px solid rgba(0,0,0,0.35);padding: 10px;margin-bottom: 20px;">      <nx-select        label="Select"        [model]="nxSelect"        (ngModelChange)="nxSelect = $event"        [options]="nxSelectOptions"        [required]="true">      </nx-select>      <p>Result: {{nxSelect}}</p>    </div>    <div style="border: 1px solid rgba(0,0,0,0.35);padding: 10px;margin-bottom: 20px;">      <nx-datalist        type="text"        label="Datalist"        [model]="nxDatalist"        (ngModelChange)="nxDatalist = $event"        [options]="nxDatalistOptions"        noResult="no result."        [required]="true"        help="you can see the result below.">      </nx-datalist>      <p>Result: {{nxDatalist}}</p>    </div>    <div style="border: 1px solid rgba(0,0,0,0.35);padding: 10px;margin-bottom: 20px;">      <nx-date        label="Date"        [model]="nxDate"        start-date="2016-01-01"        end-date="2018-12-31"        (ngModelChange)="nxDate = $event"        [required]="true">      </nx-date>      <p>Result: {{nxDate}}</p>    </div>  </div></div>'
+        var COMPONENT_TEMPLATE = '<div>    <div style="text-align: center;display:flex; justify-content: center;">    <div style="text-align: left; width: 40%;">      <h1>Welcome to the demo page of NxForms !</h1>      <h3>You can see below some examples of existing directives.</h3>        <div style="border: 1px solid rgba(0,0,0,0.35);padding: 10px 20px;margin-bottom: 20px;">          <div style="border: 1px solid rgba(0,0,0,0.2);background: rgba(0,0,0,0.03);font-family: Consolas;margin:10px 0;float: left;">            <span *ngFor="let line of nxInputTemplate.split(\'\'); let num = index" style="display: inline-block;float: left;width: 100%;">              <p style="margin: 0;border-right: 1px solid rgba(0,0,0,0.5);background: rgba(0,0,0,0.05);padding: 0 5px;float: left;">                {{num + 1}}              </p>              <p style="margin: 0;float:left;margin-left: 10px;">{{line}}</p>            </span>          </div>          <nx-input            type="text"            label="Input"            [model]="nxInput"            (ngModelChange)="nxInput = $event"            [required]="true"            help="you can see the result below.">          </nx-input>          <p>Result: {{nxInput}}</p>        </div>        <div style="border: 1px solid rgba(0,0,0,0.35);padding: 10px 20px;margin-bottom: 20px;">          <div style="border: 1px solid rgba(0,0,0,0.2);background: rgba(0,0,0,0.03);font-family: Consolas;margin:10px 0;float: left;">            <span *ngFor="let line of nxSelectTemplate.split(\'\'); let num = index" style="display: inline-block;float: left;width: 100%;">              <p style="margin: 0;border-right: 1px solid rgba(0,0,0,0.5);background: rgba(0,0,0,0.05);padding: 0 5px;float: left;">                {{num + 1}}              </p>              <p style="margin: 0;float:left;margin-left: 10px;">{{line}}</p>            </span>          </div>          <nx-select            label="Select"            [model]="nxSelect"            (ngModelChange)="nxSelect = $event"            [options]="nxSelectOptions"            [required]="true">          </nx-select>          <p>Result: {{nxSelect}}</p>        </div>        <div style="border: 1px solid rgba(0,0,0,0.35);padding: 10px 20px;margin-bottom: 20px;">          <div style="border: 1px solid rgba(0,0,0,0.2);background: rgba(0,0,0,0.03);font-family: Consolas;margin:10px 0;float: left;">            <span *ngFor="let line of nxDatalistTemplate.split(\'\'); let num = index"              style="display: inline-block;float: left;width: 100%;">              <p style="margin: 0;border-right: 1px solid rgba(0,0,0,0.5);background: rgba(0,0,0,0.05);padding: 0 5px;float: left;">                {{num + 1}}              </p>              <p style="margin: 0;float:left;margin-left: 10px;">{{line}}</p>            </span>          </div>          <nx-datalist            type="text"            label="Datalist"            [model]="nxDatalist"            (ngModelChange)="nxDatalist = $event"            [options]="nxDatalistOptions"            noResult="no result."            [required]="true"            help="you can see the result below.">          </nx-datalist>          <p>Result: {{nxDatalist}}</p>        </div>        <div style="border: 1px solid rgba(0,0,0,0.35);padding: 10px 20px;margin-bottom: 20px;">          <div style="border: 1px solid rgba(0,0,0,0.2);background: rgba(0,0,0,0.03);font-family: Consolas;margin:10px 0;float: left;">            <span *ngFor="let line of nxDateTemplate.split(\'\'); let num = index" style="display: inline-block;float: left;width: 100%;">              <p style="margin: 0;border-right: 1px solid rgba(0,0,0,0.5);background: rgba(0,0,0,0.05);padding: 0 5px;float: left;">                {{num + 1}}              </p>              <p style="margin: 0;float:left;margin-left: 10px;">{{line}}</p>            </span>          </div>          <nx-date            label="Date"            [model]="nxDate"            start-date="2016-01-01"            end-date="2018-12-31"            (ngModelChange)="nxDate = $event"            [required]="true">          </nx-date>          <p>Result: {{nxDate}}</p>        </div>      </div></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-playground'},{'name': 'NxDatalistComponent', 'selector': 'nx-datalist'},{'name': 'NxDateComponent', 'selector': 'nx-date'},{'name': 'NxInputComponent', 'selector': 'nx-input'},{'name': 'NxSelectComponent', 'selector': 'nx-select'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'AppComponent'};
